@@ -214,7 +214,7 @@ def start_server(host, port, processor):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--host", default="0.0.0.0")
+    parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", default=9998)
 
     parser.add_argument(
@@ -224,7 +224,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--ckpt_file",
-        default=str(hf_hub_download(repo_id="SWivid/F5-TTS", filename="F5TTS_v1_Base/model_1250000.safetensors")),
+        default="D:\\huggingface_modle\\hub\\models--SWivid--F5-TTS\\snapshots\\84e5a410d9cead4de2f847e7c9369a6440bdfaca\\F5TTS_v1_Base\\model_1250000.safetensors",
         help="Path to the model checkpoint file",
     )
     parser.add_argument(
@@ -235,16 +235,16 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--ref_audio",
-        default=str(files("f5_tts").joinpath("infer/examples/basic/basic_ref_en.wav")),
+        default="C:/Users/shaoqisun/Desktop/test.mp3",
         help="Reference audio to provide model with speaker characteristics",
     )
     parser.add_argument(
         "--ref_text",
-        default="",
+        default="这边是微众银行给你来电啊，就关于你这个微粒贷欠款事项已经916天了，已经在我们银行的一个诉讼名单上了，现在怎么去解决微粒贷欠款问题，对吧。你拖了916天了，银行也要金额追讨，追讨这个事情，是吧。逃避不了了。",
         help="Reference audio subtitle, leave empty to auto-transcribe",
     )
 
-    parser.add_argument("--device", default=None, help="Device to run the model on")
+    parser.add_argument("--device", default='cuda', help="Device to run the model on")
     parser.add_argument("--dtype", default=torch.float32, help="Data type to use for model inference")
 
     args = parser.parse_args()

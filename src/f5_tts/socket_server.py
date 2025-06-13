@@ -224,7 +224,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--ckpt_file",
-        default="D:\\huggingface_modle\\hub\\models--SWivid--F5-TTS\\snapshots\\84e5a410d9cead4de2f847e7c9369a6440bdfaca\\F5TTS_v1_Base\\model_1250000.safetensors",
+        default="E:\\huggingface_modle\\hub\\models--SWivid--F5-TTS\\snapshots\\84e5a410d9cead4de2f847e7c9369a6440bdfaca\\F5TTS_v1_Base\\model_1250000.safetensors",
         help="Path to the model checkpoint file",
     )
     parser.add_argument(
@@ -235,12 +235,12 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--ref_audio",
-        default="C:/Users/shaoqisun/Desktop/test.mp3",
+        default=r"C:\Users\shaoqisun\Desktop\陈伟龙.WAV",
         help="Reference audio to provide model with speaker characteristics",
     )
     parser.add_argument(
         "--ref_text",
-        default="这边是微众银行给你来电啊，就关于你这个微粒贷欠款事项已经916天了，已经在我们银行的一个诉讼名单上了，现在怎么去解决微粒贷欠款问题，对吧。你拖了916天了，银行也要金额追讨，追讨这个事情，是吧。逃避不了了。",
+        default="你好，你微粒贷严重违约。接下来可能向你寄送律师函或者向法院提起诉讼，今天可以处理吗？",
         help="Reference audio subtitle, leave empty to auto-transcribe",
     )
 

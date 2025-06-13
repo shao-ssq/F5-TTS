@@ -58,6 +58,6 @@ async def listen_to_F5TTS(text, server_ip="localhost", server_port=9998):
 
 
 if __name__ == "__main__":
-    text_to_send = "如果今天没处理的话，后续可能上报征信影响信用记录。尽量想办法今天处理掉，可以找身边人帮忙周转下，避免对征信造成影响"
+    text_to_send = "如果今天没处理的话，后续可能上报征信影响信用记录。尽量想办法今天处理掉，可以找身边人帮忙周转下，避免对征信造成影响。"
 
     asyncio.run(listen_to_F5TTS(text_to_send))

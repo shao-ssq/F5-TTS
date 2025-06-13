@@ -24,7 +24,7 @@ class F5TTS:
     def __init__(
         self,
         model="F5TTS_v1_Base",
-        ckpt_file="",
+        ckpt_file="E:\\huggingface_modle\\hub\\models--SWivid--F5-TTS\\snapshots\\84e5a410d9cead4de2f847e7c9369a6440bdfaca\\F5TTS_v1_Base\\model_1250000.safetensors",
         vocab_file="",
         ode_method="euler",
         use_ema=True,
@@ -153,12 +153,11 @@ if __name__ == "__main__":
     f5tts = F5TTS()
 
     wav, sr, spec = f5tts.infer(
-        ref_file=str(files("f5_tts").joinpath("infer/examples/basic/basic_ref_en.wav")),
-        ref_text="some call me nature, others call me mother nature.",
-        gen_text="""I don't really care what you call me. I've been a silent spectator, watching species evolve, empires rise and fall. But always remember, I am mighty and enduring. Respect me and I'll nurture you; ignore me and you shall face the consequences.""",
-        file_wave=str(files("f5_tts").joinpath("../../tests/api_out.wav")),
-        file_spec=str(files("f5_tts").joinpath("../../tests/api_out.png")),
-        seed=None,
+        ref_file=r"C:\Users\shaoqisun\Desktop\陈伟龙.WAV",
+        ref_text="你好，你微粒贷严重违约。接下来可能向你寄送律师函或者向法院提起诉讼，今天可以处理吗？。",
+        gen_text="""你微粒贷已经逾期，经多次催缴仍未还清，你的信用记录将受到严重影响。信用风险已经被提高，请高度重视以免造成更大的负面影响及承担法律责任。""",
+        file_wave=r"C:\\Users\\shaoqisun\\Desktop\\1.wav",
+        seed=1140669247,
     )
 
     print("seed :", f5tts.seed)

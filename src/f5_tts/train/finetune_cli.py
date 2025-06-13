@@ -81,7 +81,7 @@ def parse_args():
 def main():
     args = parse_args()
 
-    checkpoint_path = str(files("f5_tts").joinpath(f"../../ckpts/{args.dataset_name}"))
+    checkpoint_path = r"D:\PyCharmWorkSpace\TTS\F5-TTS\ckpts"
 
     # Model parameters based on experiment name
 
@@ -98,7 +98,7 @@ def main():
         )
         if args.finetune:
             if args.pretrain is None:
-                ckpt_path = str(cached_path("hf://SWivid/F5-TTS/F5TTS_v1_Base/model_1250000.safetensors"))
+                ckpt_path = r"E:\huggingface_modle\hub\models--SWivid--F5-TTS\snapshots\84e5a410d9cead4de2f847e7c9369a6440bdfaca\F5TTS_v1_Base\model_1250000.safetensors"
             else:
                 ckpt_path = args.pretrain
 

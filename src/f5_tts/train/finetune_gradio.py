@@ -42,9 +42,9 @@ last_device = ""
 last_ema = None
 
 
-path_data = str(files("f5_tts").joinpath("../../data"))
-path_project_ckpts = str(files("f5_tts").joinpath("../../ckpts"))
-file_train = str(files("f5_tts").joinpath("train/finetune_cli.py"))
+path_data = r"D:\PyCharmWorkSpace\TTS\F5-TTS\data"
+path_project_ckpts = r"D:\PyCharmWorkSpace\TTS\F5-TTS\ckpts"
+file_train = r"D:\PyCharmWorkSpace\TTS\F5-TTS\src\f5_tts\train\finetune_cli.py"
 
 device = (
     "cuda"
